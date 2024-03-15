@@ -1,1 +1,43 @@
-spring.application.name=e-commerce_platform
+spring:
+  application:
+    name: e-commerce_platform
+  datasource:
+    url: jdbc:postgresql://localhost:5432/e-commerce_platform
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: levc4kvlad@gmail.com
+    password: bgqfizsompxzhlyp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /v3/swagger-ui.html
+
+application:
+  security:
+    jwt:
+      secret-key: cyKiCWf0E+gMexgr+jM/DHBYrxiDVsey4UzMVTS2dWVmouQVBNFcHnrhaeNnHvNK
+      expiration: 2592000000
+      refresh-token:
+        expiration: 2592000000
+
+paypal:
+  mode: sandbox
+  clientId: AQ3KH6M_QoZqH8L0VKOCxEu4b2J4chH1-GvKWMZyy_Elob_BVIyT1VGlh2z82SOSAnqk5LvJ7X7r4W5r
+  secret: EEFNiIReV8dXgP6EvjShyxSuODg_FUscnkwfut-IRqDIyG9qqzk14oQD6rbsrQJVQOGZMX0qnUlCCrou

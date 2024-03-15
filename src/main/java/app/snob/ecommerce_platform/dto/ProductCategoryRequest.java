@@ -1,2 +1,16 @@
-package app.snob.ecommerce_platform.dto;public class ProductCategoryRequest {
+package app.snob.ecommerce_platform.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class ProductCategoryRequest {
+    @NotBlank
+    private String name;
 }

@@ -1,2 +1,17 @@
-package app.snob.ecommerce_platform.dto;public class OrderItemsRequest {
+package app.snob.ecommerce_platform.dto;
+
+import jakarta.validation.constraints.Min;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class OrderItemsRequest {
+    @Min(value = 1, message = "Quantity must be positive")
+    private Integer quantity;
+    private Long productId;
 }

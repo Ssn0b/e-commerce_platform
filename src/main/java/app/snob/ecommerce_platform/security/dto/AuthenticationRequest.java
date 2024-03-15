@@ -1,2 +1,13 @@
-package app.snob.ecommerce_platform.security.dto;public class AuthenticationRequest {
+package app.snob.ecommerce_platform.security.dto;
+
+import lombok.*;
+
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class AuthenticationRequest {
+    private String email;
+    private String password;
 }
