@@ -13,8 +13,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: levc4kvlad@gmail.com
-    password: bgqfizsompxzhlyp
+    username: ${email}
+    password: ${password}
     properties:
       mail:
         smtp:
@@ -39,5 +39,5 @@ application:
 
 paypal:
   mode: sandbox
-  clientId: AQ3KH6M_QoZqH8L0VKOCxEu4b2J4chH1-GvKWMZyy_Elob_BVIyT1VGlh2z82SOSAnqk5LvJ7X7r4W5r
-  secret: EEFNiIReV8dXgP6EvjShyxSuODg_FUscnkwfut-IRqDIyG9qqzk14oQD6rbsrQJVQOGZMX0qnUlCCrou
+  clientId: ${client}
+  secret: ${secret}
